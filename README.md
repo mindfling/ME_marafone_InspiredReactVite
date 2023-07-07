@@ -6,4 +6,4 @@ It take place at 03-16.07.2023
 
 https://github.com/mindfling/ME_marafone_InspiredReactVite
 
-is myone.v.0.0.8 styled header
+is myone.v.0.0.9 styled header footer

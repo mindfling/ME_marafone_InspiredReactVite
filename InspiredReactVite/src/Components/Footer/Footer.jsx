@@ -67,7 +67,7 @@ export const Footer = () => (
           <a href="mailto:Inspired@gmail.com" className={s.link}>Inspired@gmail.com</a>
         </div>
         <div>
-          <a href="tel:89304902620" className={s.link}>8 930 490 26 20</a>
+          <a href="tel:89304902620" className={s.link}>8&nbsp;930&nbsp;490&nbsp;26&nbsp;20</a>
         </div>
       </div>
       
@@ -81,7 +81,7 @@ export const Footer = () => (
             <p title="UX/UI designer">Designer: <a href="@Mrshmallowww" className={s.link}>Anastasia Ilina</a></p>
           </li>
           <li>
-            <p title="Web developer">Developer: <a href="@MindFling" className={s.link}>Me Mindfling</a></p>
+            <p title="Web developer">Developer: <a href="@MindFling" className={s.link}>Me Mindfling React+Vite</a></p>
           </li>
         </ul>
       </div>
