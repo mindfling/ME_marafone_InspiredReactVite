@@ -3,8 +3,24 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+const sayHelloTimes = (count = 0) => {
+  if (count < 0) return 0;
+  let result = `Lets say Hello ${count} ${count == 1 ? 'time'  : 'times'}:\n\n`;
+  if (count === 0) {
+    result = 'We cant say Hello zero or less times';
+  }
+  
+  let i = 0;
+  while(i < count) {
+    result += ++i + '. Helllloooo\n';
+  }
+  
+  alert(result);
+  return result;
+}
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(10);
 
   return (
     <>
@@ -16,10 +32,23 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h2>Vite + React ++plus {count} Dim</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={() => setCount((count) => {
+          if (count > 1) {
+            return count - 1;
+          } else {
+            console.log('bottom is 0');
+            return 0;
+          }
+        })}>
+          decrease to {count}
+        </button>
+        <button onClick={() => sayHelloTimes(count)}>
+          say Hello {count} times
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
