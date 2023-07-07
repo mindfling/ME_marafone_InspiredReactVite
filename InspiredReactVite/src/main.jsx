@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import './index.css'
+import 'normalize.css'
+import './index.scss'
+
+// import from App default export
+import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <h1>Привет React Vite</h1>
+    <App />
   </React.StrictMode>,
 )
