@@ -1,13 +1,9 @@
-// func comp
-const App = () => {
-  console.log('lets App')
-  
-  return (
-    <div>
-      <h1>Привет React Vite</h1>
-    </div>
-  )
-}
+// simple import
+import { Header } from './Components/Header/Header';
 
-// simple export by default
-export default App;
+// export func comp
+export const App = () => (
+  <>
+    <Header />
+  </>
+)

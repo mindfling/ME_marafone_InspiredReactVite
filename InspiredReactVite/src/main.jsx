@@ -2,12 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import 'normalize.css'
-import './index.scss'
+// import './index.scss'
+import './style.scss'
 
-// import from App default export
-import App from './App.jsx'
+// import App comp not by default
+import { App } from './App.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root');
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
