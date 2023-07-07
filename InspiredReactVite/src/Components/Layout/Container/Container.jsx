@@ -1,13 +1,11 @@
 // react plugin classnames
 import cn from 'classnames'
-// import './Container.scss'
 import style from './Container.module.scss';
-console.log('style container: ', style);
 
-export const Container = (props) => (
+export const Container = ({ className, children }) => (
   <>
-  <div className={cn(style.container, props.className)}>
-    {props.children}
+  <div className={cn(style.container, className)}>
+    {children}
   </div>
   </>
 )
