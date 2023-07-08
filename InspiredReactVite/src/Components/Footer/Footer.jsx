@@ -84,13 +84,13 @@ export const Footer = () => (
           <li className="footer-category__item">
             <h3 className={s.categorySubtitle}><a href="#" className={s.link}>Женский</a></h3>
             <ul className={s.categorySublist}>
-              {categoryList.women.map((item) => <ListItem href='#' text={item}/> )}
+              {categories.women.list.map((item) => <ListItem text={item.title} href={item.slug}/> )}
             </ul>
           </li>
           <li className="footer-category__item">
             <h3 className={s.categorySubtitle}><a href="#" className={s.link}>Мужчины</a></h3>
             <ul className={s.categorySublist}>
-              {categoryList.men.map((item) => <ListItem text={item} href='#'/> )}
+              {categories.men.list.map((item) => <ListItem text={item.title}/> )}
             </ul>
           </li>
         </ul>
