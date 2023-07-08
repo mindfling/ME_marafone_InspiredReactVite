@@ -3,23 +3,24 @@ import { Container } from '../Layout/Container/Container';
 import s from './Footer.module.scss';
 import cn from 'classnames';
 import { ListItem } from './ListItem';
+import { Sublist } from './Sublist';
 
-export const categoryList = {
-  'women': [
-    'Куртки',
-    'Джинсы',
-    'Брюки',
-    'Рубашки',
-    'Толстовки',
-    'Футболки',
-  ],
-  'men': [
-    'Джинсы',
-    'Носки',
-    'Халаты',
-    'Термобелье',
-  ],
-}
+// export const categoryList = {
+//   'women': [
+//     'Куртки',
+//     'Джинсы',
+//     'Брюки',
+//     'Рубашки',
+//     'Толстовки',
+//     'Футболки',
+//   ],
+//   'men': [
+//     'Джинсы',
+//     'Носки',
+//     'Халаты',
+//     'Термобелье',
+//   ],
+// }
 
 export const categories = {
   "women": {
@@ -80,19 +81,10 @@ export const Footer = () => (
     
       <div className={s.category}>
         <h2 className={cn(s.title, s.categoryTitle)}>Каталог</h2>
+        
         <ul className={s.categoryList}>
-          <li className="footer-category__item">
-            <h3 className={s.categorySubtitle}><a href="#" className={s.link}>Женский</a></h3>
-            <ul className={s.categorySublist}>
-              {categories.women.list.map((item) => <ListItem text={item.title} href={item.slug}/> )}
-            </ul>
-          </li>
-          <li className="footer-category__item">
-            <h3 className={s.categorySubtitle}><a href="#" className={s.link}>Мужчины</a></h3>
-            <ul className={s.categorySublist}>
-              {categories.men.list.map((item) => <ListItem text={item.title}/> )}
-            </ul>
-          </li>
+          <Sublist gender={categories.women} />
+          <Sublist gender={categories.men} />
         </ul>
       </div>
       
