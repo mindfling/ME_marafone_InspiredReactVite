@@ -2,6 +2,77 @@ import { Container } from '../Layout/Container/Container';
 // import { Container } from 'src/Components/Layout/Container/Container';
 import s from './Footer.module.scss';
 import cn from 'classnames';
+import { ListItem } from './ListItem';
+
+export const categoryList = {
+  'women': [
+    'Куртки',
+    'Джинсы',
+    'Брюки',
+    'Рубашки',
+    'Толстовки',
+    'Футболки',
+  ],
+  'men': [
+    'Джинсы',
+    'Носки',
+    'Халаты',
+    'Термобелье',
+  ],
+}
+
+export const categories = {
+  "women": {
+    "title": "Женское",
+    "list": [
+      {
+        "title": "Бюстгальтеры",
+        "slug": "bras"
+      },
+      {
+        "title": "Трусы",
+        "slug": "panties"
+      },
+      {
+        "title": "Носки",
+        "slug": "socks"
+      },
+      {
+        "title": "Халаты",
+        "slug": "bathrobes"
+      },
+      {
+        "title": "Термобельё",
+        "slug": "thermal"
+      },
+      {
+        "title": "Пижамы",
+        "slug": "pijamas"
+      }
+    ]
+  },
+  "men": {
+    "title": "Мужское",
+    "list": [
+      {
+        "title": "Нижнее бельё",
+        "slug": "underwear"
+      },
+      {
+        "title": "Носки",
+        "slug": "socks"
+      },
+      {
+        "title": "Халаты",
+        "slug": "bathrobes"
+      },
+      {
+        "title": "Термобельё",
+        "slug": "thermal"
+      }
+    ]
+  }
+};
 
 export const Footer = () => (
   <footer className={s.footer}>
@@ -13,25 +84,18 @@ export const Footer = () => (
           <li className="footer-category__item">
             <h3 className={s.categorySubtitle}><a href="#" className={s.link}>Женский</a></h3>
             <ul className={s.categorySublist}>
-              <li><a href="#" className={s.link}>Куртки</a></li>
-              <li><a href="#" className={s.link}>Джинсы</a></li>
-              <li><a href="#" className={s.link}>Брюки</a></li>
-              <li><a href="#" className={s.link}>Рубашки</a></li>
-              <li><a href="#" className={s.link}>Толстовки</a></li>
-              <li><a href="#" className={s.link}>Футболки</a></li>
+              {categoryList.women.map((item) => <ListItem href='#' text={item}/> )}
             </ul>
           </li>
           <li className="footer-category__item">
             <h3 className={s.categorySubtitle}><a href="#" className={s.link}>Мужчины</a></h3>
             <ul className={s.categorySublist}>
-              <li><a href="#" className={s.link}>Джинсы</a></li>
-              <li><a href="#" className={s.link}>Носки</a></li>
-              <li><a href="#" className={s.link}>Халаты</a></li>
-              <li><a href="#" className={s.link}>Термобелье</a></li>
+              {categoryList.men.map((item) => <ListItem text={item} href='#'/> )}
             </ul>
           </li>
         </ul>
       </div>
+      
       
       <div className={s.social}>
         <h2 className={cn(s.title, s.socialTitle)}>Связаться c нами</h2>
