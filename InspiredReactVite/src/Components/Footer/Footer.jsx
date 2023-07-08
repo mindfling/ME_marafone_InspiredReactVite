@@ -83,8 +83,9 @@ export const Footer = () => (
         <h2 className={cn(s.title, s.categoryTitle)}>Каталог</h2>
         
         <ul className={s.categoryList}>
-          <Sublist gender={categories.women} />
-          <Sublist gender={categories.men} />
+          {Object.keys(categories).map(genderKey => (
+            <Sublist gender={categories[genderKey]} />
+          ))}
         </ul>
       </div>
       

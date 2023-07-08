@@ -1,4 +1,3 @@
-import { categories } from './Footer';
 import s from './Footer.module.scss';
 import { ListItem } from './ListItem';
 
