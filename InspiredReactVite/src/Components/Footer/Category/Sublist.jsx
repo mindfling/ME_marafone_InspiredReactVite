@@ -1,10 +1,10 @@
-import s from './Footer.module.scss';
+import s from '../Footer.module.scss';
 import { ListItem } from './ListItem';
 
-export const Sublist = ({ gender }) => (
+export const Sublist = ({ gender, link }) => (
   <li>
     <h3 className={s.categorySubtitle}>
-      <a href="#" className={s.link}>
+      <a href={link} className={s.link}>
         {gender.title}
       </a>
     </h3>

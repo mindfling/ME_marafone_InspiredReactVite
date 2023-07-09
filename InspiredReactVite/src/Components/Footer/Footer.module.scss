@@ -1,5 +1,6 @@
 .container {
-  padding-top: 51px;
+  /* footer__container */
+  padding-top: 51px !important;
   padding-bottom: 24px;
   border-top: 1px solid #dcdcdc;
   display: grid;
@@ -161,6 +162,10 @@
   &List {
     display: flex;
     gap: 10px;
+  }
+
+  &LinkTg:hover {
+    color: #1f53a1;
   }
 
   &LinkFB:hover {

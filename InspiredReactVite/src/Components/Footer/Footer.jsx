@@ -1,9 +1,14 @@
-import { Container } from '../Layout/Container/Container';
-// import { Container } from 'src/Components/Layout/Container/Container';
 import s from './Footer.module.scss';
 import cn from 'classnames';
-import { ListItem } from './ListItem';
-import { Sublist } from './Sublist';
+
+// import { Container } from 'src/Components/Layout/Container/Container';
+import { Container } from '../Layout/Container/Container';
+import { Contacts } from './Contacts';
+import { Copyright } from './Copyright';
+import { Development } from './Development';
+import { Social } from './Social';
+import { Sublist } from './Category/Sublist';
+import { Category } from './Category/Category';
 
 // export const categoryList = {
 //   'women': [
@@ -76,21 +81,23 @@ export const categories = {
 };
 
 export const Footer = () => (
-  <footer className={s.footer}>
+  <footer className={"footer"}>
     <Container className={cn(s.container)}>
     
-      <div className={s.category}>
+      <Category categories={categories}/>
+      {/* <div className={s.category}>
         <h2 className={cn(s.title, s.categoryTitle)}>Каталог</h2>
         
         <ul className={s.categoryList}>
           {Object.keys(categories).map(genderKey => (
-            <Sublist gender={categories[genderKey]} />
+            <Sublist link={genderKey} gender={categories[genderKey]} />
           ))}
         </ul>
-      </div>
+      </div> */}
       
       
-      <div className={s.social}>
+      <Social />
+      {/* <div className={s.social}>
         <h2 className={cn(s.title, s.socialTitle)}>Связаться c нами</h2>
         <p className={s.socialSubtitle}>Контакты и адреса магазинов</p>
         <ul className={s.socialList}>
@@ -117,22 +124,30 @@ export const Footer = () => (
               </svg></a>
           </li>
         </ul>
-      </div>
+      </div> */}
       
-      <div className={s.contacts}>
+      
+      <Contacts />
+      {/* <div className={s.contacts}>
         <div>
           <a href="mailto:Inspired@gmail.com" className={s.link}>Inspired@gmail.com</a>
         </div>
         <div>
           <a href="tel:89304902620" className={s.link}>8&nbsp;930&nbsp;490&nbsp;26&nbsp;20</a>
         </div>
-      </div>
+      </div> */}
       
-      <div className={s.copyright}>
+      
+      <Copyright />
+      {/* <div className={s.copyright}>
         <p>&copy;&nbsp;INSPIRED,&nbsp;2023</p>
-      </div>
+      </div> */}
       
-      <div className={s.development}>
+      
+      <Development 
+        designer={{name: 'Annanastasya', email: 'mrshmallowww@gmail.com'}} 
+        developer={{name: "Mindfling React+Vite", email: 'mindfling@gmail.com'}}/>
+      {/* <div className={s.development}>
         <ul className={s.developmentList}>
           <li>
             <p title="UX/UI designer">Designer: <a href="@Mrshmallowww" className={s.link}>Anastasia Ilina</a></p>
@@ -141,7 +156,7 @@ export const Footer = () => (
             <p title="Web developer">Developer: <a href="@MindFling" className={s.link}>Me Mindfling React+Vite</a></p>
           </li>
         </ul>
-      </div>
+      </div> */}
     
     </Container>
   </footer>
