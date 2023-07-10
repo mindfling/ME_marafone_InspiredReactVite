@@ -8,7 +8,7 @@ export const Category = ({ categories }) => (
     
     <ul className={s.categoryList}>
       {Object.keys(categories).map(genderKey => (
-        <Sublist link={genderKey} gender={categories[genderKey]} />
+        <Sublist key={genderKey} link={genderKey} gender={categories[genderKey]} />
       ))}
     </ul>
   </div>
