@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import 'normalize.css'
-import './style.scss'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import 'normalize.css';
+import './index.scss';
 
 import { App } from './App.jsx'
 

@@ -2,19 +2,12 @@ import { Container } from '../../Layout/Container/Container';
 import { Logo } from './Logo';
 import s from './Top.module.scss';
 import cn from 'classnames';
-// import logo from '../../../assets/main-logo.svg';
-// import logo from '/src/assets/main-logo.svg';
 
 export const Top = () => (
   <div className={s.top}>
     <Container className={cn(s.topContainer)}>
       <a className={cn(s.topLink, s.topPhone)} href="tel:89001231234" title="Наш телефон">8&nbsp;930&nbsp;490&nbsp;26&nbsp;20</a>
-      
       <Logo />
-      {/* <a className={cn(s.topLink, s.topLogo)} href="/" title="Логотип Inspired">
-        <img className={cn(s.topLogo)} src={logo} alt="Логотип Inspired"></img>
-      </a> */}
-      
       <div className={cn(s.topNavigation, 'header__navigation')}>
         <ul className={s.topNavList}>
           <li key={"search"} className="header__nav-item">

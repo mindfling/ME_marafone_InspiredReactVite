@@ -10,23 +10,21 @@ export const Development = ({
     name: 'Dim Mindfling',
     email: '@Mindfling',
   }
-}) => {
-  return (
-    <div className={s.development}>
-      <ul className={s.developmentList}>
-        <li>
-          <p title="UX/UI designer">Designer:
-            <a href={designer.email} className={s.link}>
-              &nbsp;{designer.name}
-            </a>
-          </p>
-        </li>
-        <li><p title="Web developer">Developer:&nbsp;
-          <a href={developer.email} className={s.link}>
-            {developer.name}
+}) => (
+  <div className={s.development}>
+    <ul className={s.developmentList}>
+      <li>
+        <p title="UX/UI designer">Designer:
+          <a href={designer.email} className={s.link}>
+            &nbsp;{designer.name}
           </a>
-        </p></li>
-      </ul>
-    </div>
-  )
-}
+        </p>
+      </li>
+      <li><p title="Web developer">Developer:&nbsp;
+        <a href={developer.email} className={s.link}>
+          {developer.name}
+        </a>
+      </p></li>
+    </ul>
+  </div>
+)
