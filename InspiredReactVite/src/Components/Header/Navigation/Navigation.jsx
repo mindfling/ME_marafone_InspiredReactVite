@@ -3,11 +3,14 @@ import { Gender } from "./Gender/Gender";
 
 import { Container } from "../../Layout/Container/Container";
 
+import s from './Navigation.module.scss';
+import cn from "classnames";
+
 export const Navigation = () => (
-  <nav className="navigation">
+  <nav className={cn(s.navigation, "navigation")} >
     <Container>
       <Gender />
-      <Category />
+      <Category gender="women"/>
     </Container>
   </nav>
 )
