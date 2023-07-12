@@ -1,4 +1,4 @@
-import { NavLink } from '../NavLink';
+import { NavLink } from 'react-router-dom';
 import s from './Category.module.scss';
 import cn from "classnames";
 
@@ -55,34 +55,14 @@ export const categories = {
   }
 };
 
-export const Category = ({gender='women'}) => {
-  
-  /*
-  const category = {
-    'women': [
-      'Куртки',
-      'Джинсы',
-      'Брюки',
-      'Рубашки',
-      'Толстовки',
-      'Футболки',
-    ],
-    'men': [
-      'Джинсы',
-      'Носки',
-      'Халаты',
-      'Термобелье',
-    ],
-  }
-  */
-  
-  return (
-    <ul className={cn(s.category, "category")}>
-      {categories[gender].list.map(cat => (
-        <li className={cn(s.item, "item")}>
-          <NavLink key={cat.slug} link={cat.slug} classes={cn(s.link, "link")} text={cat.title} />
-        </li>
-      ))}
-    </ul>
-  );
-}
+export const Category = ({gender='women'}) => (
+  <ul className={cn(s.category, "category")}>
+    {categories[gender].list.map(item => (
+      <li key={item.slug} className={cn(s.item, "item")}>
+        <NavLink className={({ isActive }) => cn(s.link, isActive && s.linkActive)} to={`${gender}/${item.slug}`}>
+          {item.title}
+        </NavLink>
+      </li>
+    ))}
+  </ul>
+)
