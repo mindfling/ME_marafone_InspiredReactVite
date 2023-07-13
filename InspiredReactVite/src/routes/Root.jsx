@@ -3,12 +3,19 @@ import { Footer } from "../Components/Footer/Footer"
 import { Header } from "../Components/Header/Header"
 import { Main } from "../Components/Layout/Main/Main"
 
-export const Root = () => (
-  <>
-    <Header />
-    <Main >
-      <Outlet />
-    </Main>
-    <Footer />
-  </>
-)
+import { categories } from "./Consts";
+
+
+export const Root = () => {
+  console.log('categories: ', categories);
+  
+  return (
+    <>
+      <Header categories={categories}/>
+      <Main >
+        <Outlet />
+      </Main>
+      <Footer categories={categories}/>
+    </>
+  )
+}

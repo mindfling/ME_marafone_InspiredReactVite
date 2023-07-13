@@ -8,7 +8,7 @@ import s from './Navigation.module.scss';
 import cn from "classnames";
 
 
-export const Navigation = () => {
+export const Navigation = ({ categories }) => {
   // определяем gender по location в адресной строке
   const location = useLocation();
   const gender = location.pathname.split('/')[1];
@@ -16,8 +16,8 @@ export const Navigation = () => {
   return (
     <nav className={cn(s.navigation, "navigation")} >
       <Container>
-        <Gender />
-        <Category gender={gender}/>
+        <Gender categories={categories}/>
+        <Category categories={categories} gender={gender}/>
       </Container>
     </nav>
   )
