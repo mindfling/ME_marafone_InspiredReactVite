@@ -10,22 +10,6 @@ import { Social } from './Social';
 import { Sublist } from './Category/Sublist';
 import { Category } from './Category/Category';
 
-// export const categoryList = {
-//   'women': [
-//     'Куртки',
-//     'Джинсы',
-//     'Брюки',
-//     'Рубашки',
-//     'Толстовки',
-//     'Футболки',
-//   ],
-//   'men': [
-//     'Джинсы',
-//     'Носки',
-//     'Халаты',
-//     'Термобелье',
-//   ],
-// }
 
 export const categories = {
   "women": {
