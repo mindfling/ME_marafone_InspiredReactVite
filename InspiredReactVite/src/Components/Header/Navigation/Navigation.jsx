@@ -10,15 +10,15 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setActiveGender } from "../../../features/navigationSlice";
 
-
+// используем хуки крючки реакта
 export const Navigation = ({ categories }) => {
   const dispatch = useDispatch();
-  const location = useLocation();
-  const gender = location.pathname.split('/')[1] || 'women';
+  const location = useLocation(); //?
+  const gender = location.pathname.split('/')[1] || 'women'; //?
   
   useEffect(() => {
     dispatch(setActiveGender(gender));
-  }, [gender, dispatch]);
+  }, [gender, dispatch]); // вызывается при изменении gender
   
   return (
     <nav className={cn(s.navigation, "navigation")} >

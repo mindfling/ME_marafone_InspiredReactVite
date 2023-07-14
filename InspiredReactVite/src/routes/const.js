@@ -1,3 +1,13 @@
+// URLs:
+// API server url
+export const API_URL = 'http://localhost:8024';
+// others API
+export const GOODS_URL = `${API_URL}/api/goods` // получить список всех товаров с пагинацией
+export const CATEGORY_URL = `${API_URL}/api/categories` // получить список категорий
+export const COLORS_URL = `${API_URL}/api/colors` // получить список цветов
+
+
+// temp test cats
 export const categories = {
   "women": {
     "title": "Женское",

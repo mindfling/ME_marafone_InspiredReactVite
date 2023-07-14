@@ -5,14 +5,13 @@ import { useSelector } from 'react-redux';
 
 
 export const Gender = ({ list }) => {
-  const gender = useSelector(state => state.navigation.activeGender);
-  // todo here next
+  const activeGender = useSelector(state => state.navigation.activeGender);
+  
   return (
     <ul className={cn(s.gender, "gender")}>
       {Object.keys(list).map(gen => (
-        console.log('gen Gender', gen),
         <li key={gen} className={s.item}>
-          <NavLink className={({ isActive }) => cn(s.link, isActive && s.linkActive)} to={gen}>
+          <NavLink className={({ isActive }) => cn(s.link, ( isActive || gen === activeGender) && s.linkActive)} to={gen}>
             {list[gen].title}
           </NavLink>
         </li>

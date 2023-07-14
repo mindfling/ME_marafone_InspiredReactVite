@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
-//самый простой редюсер
+// простой редюсер
 const navigationSlice = createSlice({
   name: 'navigation',
   initialState: {
-    activeGender: 'women',
+    activeGender: 'women', // текущий гендер в приложении
   },
   reducers: {
     setActiveGender: (state, action) => {
@@ -14,6 +13,8 @@ const navigationSlice = createSlice({
   }
 });
 
+// экспорт 
 export const { setActiveGender } = navigationSlice.actions;
 
+// экспорт по дефолту
 export default navigationSlice.reducer;

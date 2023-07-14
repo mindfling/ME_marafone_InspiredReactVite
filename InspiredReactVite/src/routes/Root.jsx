@@ -3,7 +3,7 @@ import { Footer } from "../Components/Footer/Footer"
 import { Header } from "../Components/Header/Header"
 import { Main } from "../Components/Layout/Main/Main"
 
-import { categories } from "./Consts";
+import { categories } from "./const";
 
 
 export const Root = () => {
