@@ -8,6 +8,7 @@ import s from './Navigation.module.scss';
 import cn from "classnames";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { setActiveGender } from "../../../features/navigationSlice";
 
 
 export const Navigation = ({ categories }) => {
@@ -16,13 +17,13 @@ export const Navigation = ({ categories }) => {
   const gender = location.pathname.split('/')[1] || 'women';
   
   useEffect(() => {
-    console.log('use effect', gender)
-  }, [location.pathname, dispatch]);
+    dispatch(setActiveGender(gender));
+  }, [gender, dispatch]);
   
   return (
     <nav className={cn(s.navigation, "navigation")} >
       <Container>
-        <Gender categories={categories}/>
+        <Gender list={categories}/>
         <Category categories={categories}/>
       </Container>
     </nav>

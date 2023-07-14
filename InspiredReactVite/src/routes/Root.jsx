@@ -7,8 +7,6 @@ import { categories } from "./Consts";
 
 
 export const Root = () => {
-  console.log('categories: ', categories);
-  
   return (
     <>
       <Header categories={categories}/>

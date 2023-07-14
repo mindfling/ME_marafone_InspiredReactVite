@@ -7,10 +7,6 @@ export const categories = {
         "slug": "bras"
       },
       {
-        "title": "Трусы",
-        "slug": "panties"
-      },
-      {
         "title": "Носки",
         "slug": "socks"
       },
@@ -19,12 +15,12 @@ export const categories = {
         "slug": "bathrobes"
       },
       {
-        "title": "Термобельё",
-        "slug": "thermal"
-      },
-      {
         "title": "Пижамы",
         "slug": "pijamas"
+      },
+      {
+        "title": "Термобельё",
+        "slug": "thermal"
       }
     ]
   },
@@ -32,20 +28,24 @@ export const categories = {
     "title": "Мужское",
     "list": [
       {
-        "title": "Нижнее бельё",
-        "slug": "underwear"
+        "title": "Халаты",
+        "slug": "bathrobes"
       },
       {
         "title": "Носки",
         "slug": "socks"
       },
       {
-        "title": "Халаты",
-        "slug": "bathrobes"
-      },
-      {
         "title": "Термобельё",
         "slug": "thermal"
+      },
+      {
+        "title": "Рубашки",
+        "slug": "shirts"
+      },
+      {
+        "title": "Джинсы",
+        "slug": "jeans"
       }
     ]
   }
