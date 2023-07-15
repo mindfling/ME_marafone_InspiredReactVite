@@ -4,15 +4,16 @@ import cn from 'classnames';
 import { useSelector } from 'react-redux';
 
 
-export const Category = ({ categories }) => {
-  // const location = useLocation();
-  // const gender = location.pathname.split('/')[1] || 'women';
+// const location = useLocation();
+// const gender = location.pathname.split('/')[1] || 'women';
+
+export const Category = ({ cats }) => {
   const activeGender = useSelector((state) => state.navigation.activeGender);
 
   return (
     <ul className={cn(s.category, 'category')}>
-      {categories[activeGender].list.map((item) => (
-        <li key={item.slug} className={cn(s.item, 'item')}>
+      {cats[activeGender].list.map((item) => (
+        <li key={item.slug} className={s.item}>
           <NavLink
             className={({ isActive }) => cn(s.link, isActive && s.linkActive)}
             to={`${activeGender}/${item.slug}`}

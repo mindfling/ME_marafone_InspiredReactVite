@@ -23,8 +23,8 @@ export const Navigation = ({ categories }) => {
   return (
     <nav className={cn(s.navigation, "navigation")} >
       <Container>
-        <Gender list={categories}/>
-        <Category categories={categories}/>
+        <Gender cats={categories}/>
+        <Category cats={categories}/>
       </Container>
     </nav>
   )
