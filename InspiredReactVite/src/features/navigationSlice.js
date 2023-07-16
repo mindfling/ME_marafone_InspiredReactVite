@@ -36,7 +36,7 @@ const navigationSlice = createSlice({
         .addCase(fetchNavigation.fulfilled, (state, action) => {
           state.status = 'success';
           state.categories = action.payload; // запис полученные полезные данные сюда
-          state.genderList = [1,2,55]  //Object.keys(action.payload); // отдельно список ключей genders
+          state.genderList = Object.keys(action.payload); // отдельно список ключей genders
         })
         .addCase(fetchNavigation.rejected, (state, action) => {
           state.status = 'failed';

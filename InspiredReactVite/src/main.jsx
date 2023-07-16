@@ -8,8 +8,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 const root = document.getElementById('root');
+// Provider подключает redux
 ReactDOM.createRoot(root).render(
-  // Provider подключает redux
   // <React.StrictMode>
     <Provider store={store}>
       <App />

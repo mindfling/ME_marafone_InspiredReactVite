@@ -5,7 +5,15 @@ import { useSelector } from 'react-redux';
 
 
 export const Gender = () => {
+  // ?????? state НЕ МЕНЯЕТСЯ ??????
   const {activeGender, genderList, categories} = useSelector(state => state.navigation);
+  
+  const navState = useSelector(state => state.navigation);
+  console.log('navState: ', navState);
+  
+  console.log('activeGender: ', activeGender);
+  console.log('genderList: ', genderList);
+  console.log('categories: ', categories);
   return (
     <ul className={cn(s.gender, "gender")}>
       {genderList?.map(gen => (
