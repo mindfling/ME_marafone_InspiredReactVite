@@ -1,8 +1,6 @@
-// обычный импорт
-import { combineReducers } from "@reduxjs/toolkit";
-// инпорт по дефолту с переименованием
-import navigationReducer from "./features/navigationSlice";
+import { combineReducers } from "@reduxjs/toolkit"; // обычный точечный импорт
+import navigationReducer from "./features/navigationSlice"; // инпорт по дефолту с переименованием
 
 export const rootReducer = combineReducers({
-  navigation: navigationReducer,
-})
+  navigation: navigationReducer, // ??????? НЕ РАБОТАЕТ ??????
+});

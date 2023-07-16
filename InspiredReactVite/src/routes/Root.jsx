@@ -4,6 +4,7 @@ import { Header } from "../Components/Header/Header"
 import { Main } from "../Components/Layout/Main/Main"
 
 import { categories } from "./const";
+import { fetchNavigation } from "../features/navigationSlice";
 
 
 export const Root = () => {

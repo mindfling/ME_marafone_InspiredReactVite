@@ -9,9 +9,10 @@ import store from './store';
 
 const root = document.getElementById('root');
 ReactDOM.createRoot(root).render(
-  <React.StrictMode>
+  // Provider подключает redux
+  // <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
