@@ -28,21 +28,21 @@ const navigationSlice = createSlice({
     setActiveGender: (state, action) => {
       state.activeGender = action.payload;
     },
-    extraReducers: (builder) => {
-      builder
-        .addCase(fetchNavigation.pending, (state) => {
-          state.status = 'loanding';
-        })
-        .addCase(fetchNavigation.fulfilled, (state, action) => {
-          state.status = 'success';
-          state.categories = action.payload; // запис полученные полезные данные сюда
-          state.genderList = Object.keys(action.payload); // отдельно список ключей genders
-        })
-        .addCase(fetchNavigation.rejected, (state, action) => {
-          state.status = 'failed';
-          state.error = action.error.message;
-        })
-    }
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchNavigation.pending, (state) => {
+        state.status = 'loanding';
+      })
+      .addCase(fetchNavigation.fulfilled, (state, action) => {
+        state.status = 'success';
+        state.categories = action.payload; // запис полученные полезные данные сюда
+        state.genderList = Object.keys(action.payload); // отдельно список ключей genders
+      })
+      .addCase(fetchNavigation.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      })
   }
 });
 
