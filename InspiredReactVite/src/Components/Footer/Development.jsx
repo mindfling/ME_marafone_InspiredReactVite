@@ -1,16 +1,8 @@
 import s from './Footer.module.scss';
 import cn from 'classnames';
 
-export const Development = ({
-  designer = {
-    name: 'Anastasia Ilina',
-    email: '@Mrshmallowww',
-  },
-  developer = {
-    name: 'Dim Mindfling',
-    email: '@Mindfling',
-  }
-}) => (
+export const Development = ({ designer = {name: 'Anastasia', email: '@Mrshmallowww' },
+                              developer = {name: 'Mindfling', email: '@Mindfling'}}) => (
   <div className={s.development}>
     <ul className={s.developmentList}>
       <li>

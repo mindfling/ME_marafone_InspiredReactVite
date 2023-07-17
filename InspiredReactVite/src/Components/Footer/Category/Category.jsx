@@ -4,11 +4,7 @@ import { Sublist } from './Sublist';
 import { useSelector } from 'react-redux';
 
 export const Category = () => {
-  // const genderList = Object.keys(categories);
-  
   const { genderList, categories }  = useSelector(state => state.navigation);
-  console.log('genderList: ', genderList);
-  console.log('categories: ', categories);
 
   return (
     <div className={s.category}>

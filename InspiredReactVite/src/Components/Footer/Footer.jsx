@@ -11,7 +11,7 @@ import { Sublist } from './Category/Sublist';
 import { Category } from './Category/Category';
 
 
-export const Footer = ({ categories }) => (
+export const Footer = () => (
   <footer className={"footer"}>
     <Container className={cn(s.container)}>
       <Category />

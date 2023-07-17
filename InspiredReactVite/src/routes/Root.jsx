@@ -14,7 +14,7 @@ export const Root = () => {
       <Main >
         <Outlet />
       </Main>
-      <Footer categories={categories}/>
+      <Footer />
     </>
   )
 }
