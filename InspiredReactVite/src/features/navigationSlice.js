@@ -11,7 +11,18 @@ export const fetchNavigation = createAsyncThunk(
     const data = await response.json();
     return data;
   }  
-)  
+)
+
+// запрос цвета
+export const fetchCorols = createAsyncThunk(
+  "colors/fetchColors",
+  async () => {
+    const response = await fetch(COLORS_URL);
+    const data = await response.json();
+    return data;
+  }
+)
+
 
 
 // простой редюсер
