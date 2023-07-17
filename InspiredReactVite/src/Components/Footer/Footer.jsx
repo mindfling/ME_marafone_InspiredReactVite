@@ -14,7 +14,7 @@ import { Category } from './Category/Category';
 export const Footer = ({ categories }) => (
   <footer className={"footer"}>
     <Container className={cn(s.container)}>
-      <Category categories={categories}/>
+      <Category />
       <Social />
       <Contacts />
       <Copyright year="2023"/>
