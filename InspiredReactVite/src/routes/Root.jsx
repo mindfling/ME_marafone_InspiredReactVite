@@ -10,7 +10,7 @@ import { fetchNavigation } from "../features/navigationSlice";
 export const Root = () => {
   return (
     <>
-      <Header categories={categories}/>
+      <Header />
       <Main >
         <Outlet />
       </Main>

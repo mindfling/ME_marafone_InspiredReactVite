@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { CATEGORY_URL } from "../routes/const";
+import { CATEGORY_URL, COLORS_URL } from "../routes/const";
 
 
 //redux thunk

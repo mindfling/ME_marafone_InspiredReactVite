@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { setActiveGender } from "../../../features/navigationSlice";
 
 // используем хуки крючки реакта
-export const Navigation = ({ categories }) => {
+export const Navigation = () => {
   const dispatch = useDispatch();
   const location = useLocation(); //?
   const gender = location.pathname.split('/')[1] || 'women'; //?
@@ -23,8 +23,8 @@ export const Navigation = ({ categories }) => {
   return (
     <nav className={cn(s.navigation, "navigation")} >
       <Container>
-        <Gender cats={categories}/>
-        <Category cats={categories}/>
+        <Gender />
+        <Category />
       </Container>
     </nav>
   )

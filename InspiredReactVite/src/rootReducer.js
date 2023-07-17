@@ -2,5 +2,5 @@ import { combineReducers } from "@reduxjs/toolkit"; // обычный точеч
 import navigationReducer from "./features/navigationSlice.js"; // инпорт по дефолту с переименованием
 
 export const rootReducer = combineReducers({
-  navigation: navigationReducer, // ??????? НЕ РАБОТАЕТ ??????
+  navigation: navigationReducer,
 });
